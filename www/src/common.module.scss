@@ -61,6 +61,9 @@ $gray2: #fcfcfc;
 .justifyEnd {
   justify-content: flex-end;
 }
+.alignStretch {
+  align-items: stretch;
+}
 .alignCenter {
   align-items: center;
 }
@@ -87,7 +90,7 @@ $gray2: #fcfcfc;
 }
 
 // margins
-@for $i from 1 through 10 {
+@for $i from 1 through 100 {
   .withMarginTop#{$i*5} {
     margin-top: #{$i * 5}px !important;
   }
