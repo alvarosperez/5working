@@ -1,0 +1,134 @@
+$header-height: 80px;
+$right-menu-width: 280px;
+
+$default-box-shadow: 0 1px 2px rgba(0, 78, 128, 0.1), 0 4px 8px rgba(0, 0, 0, 0.13);
+$secondary-box-shadow: 0 1px 2px rgba(0, 78, 128, 0.1), -4px 0 30px rgba(0, 0, 0, 0.13);
+
+// colors
+$main-black: #1a1a1a;
+$gray-subtitle: #9a9a9a;
+$dark-gray: #666;
+$gray-border: #d9d9d9;
+$gray0: #e1e1e1;
+$gray1: #f1f1f1;
+$gray2: #fcfcfc;
+
+.MainContainer {
+  // this is to use together with the Header
+
+  position: fixed;
+  padding: 20px 20px 20px 20px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.Box {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: $default-box-shadow;
+  padding: 20px;
+
+  width: 300px;
+
+  & hr {
+    border: 0;
+    height: 1px;
+    background-color: $gray0;
+    margin: 15px 0;
+    width: 100%;
+  }
+}
+
+// flex
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.justifyBetween {
+  justify-content: space-between;
+}
+.justifyAround {
+  justify-content: space-around;
+}
+.justifyCentered {
+  justify-content: center;
+}
+.justifyEnd {
+  justify-content: flex-end;
+}
+.alignCenter {
+  align-items: center;
+}
+.alignStart {
+  align-items: flex-start;
+}
+.alignEnd {
+  align-items: flex-end;
+}
+.noShrink {
+  flex-shrink: 0;
+}
+.flex100width {
+  width: 100%;
+  flex-shrink: 0;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+@for $i from 1 through 10 {
+  .gap#{$i*5} {
+    gap: #{$i * 5}px !important;
+  }
+}
+
+// margins
+@for $i from 1 through 10 {
+  .withMarginTop#{$i*5} {
+    margin-top: #{$i * 5}px !important;
+  }
+  .withMarginBottom#{$i*5} {
+    margin-bottom: #{$i * 5}px !important;
+  }
+  .withMarginLeft#{$i*5} {
+    margin-left: #{$i * 5}px !important;
+  }
+  .withMarginRight#{$i*5} {
+    margin-right: #{$i * 5}px !important;
+  }
+}
+
+// opacity and forbidden
+@for $i from 1 through 10 {
+  .withOpacity#{$i} {
+    opacity: #{$i/10} !important;
+  }
+}
+.forbidden {
+  cursor: not-allowed;
+  * {
+    pointer-events: none;
+  }
+}
+
+// texts
+.Title {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.Subtitle {
+  font-size: 12px;
+  color: $gray-subtitle;
+  margin-left: 10px;
+  text-transform: none;
+}
+.strong {
+  font-weight: bold;
+}
+.textCenter {
+  text-align: center;
+}
